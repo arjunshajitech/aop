@@ -18,41 +18,42 @@ public class AspectConfig {
 //    @Before("execution(* com.arjunshaji.aop.aop..*.*(..))")
 //    public void authorization() {
 //        // authorization performs here
-//        log.info("authorization performed..................");
+//        log.info("******* authorization performed ******");
 //    }
 //
 //    @Before("execution(* com.arjunshaji.aop.aop..*.*(..))")
 //    public void authentication() {
 //        // authentication performs here
-//        log.info("authentication performed...................");
-//    }
-//
-//    @Before("execution(* com.arjunshaji.aop.aop.AspectController.order(..))")
-//    public void beforeLogging() {
-//        log.info("order creation started............");
-//    }
-//
-//    @After("execution(* com.arjunshaji.aop.aop.AspectController.order(..))")
-//    public void afterLogging() {
-//        log.info("order creation completed............");
-//    }
-//
-//
-//    @Before("execution(* com.arjunshaji.aop.aop.AspectController.order(..))")
-//    public void jsonValidate(JoinPoint joinPoint) {
-//        log.info("validating json................");
-//        Object[] args = joinPoint.getArgs();
-//        for (Object arg : args) {
-//            System.out.println("amount : " + arg);
-//        }
+//        log.info("******* authentication performed ******");
 //    }
 
-    // aspect = jsonValidate
-    // pointcut = execution(* com.arjunshaji.aop.aop.AspectController.order(..))")
+
+    // aspect = authentication
+    // pointcut = execution(* com.arjunshaji.aop.aop..*.*(..))")
     // advice - before
     // joinPoint - get metadata
     // * any return type
     // (..) any number of arguments
+
+
+//    @Before("execution(* com.arjunshaji.aop.aop.AspectController.function1(..))")
+//    public void beforeLogging() {
+//        log.info("*****************************************");
+//    }
+//
+//    @After("execution(* com.arjunshaji.aop.aop.AspectController.function1(..))")
+//    public void afterLogging() {
+//        log.info("******************************************");
+//    }
+//
+//
+//    @Before("execution(* com.arjunshaji.aop.aop.AspectController.function1(..))")
+//    public void dataValidate(JoinPoint joinPoint) {
+//        Object[] args = joinPoint.getArgs();
+//        for (Object arg : args) {
+//            log.info("amount  : " + arg);
+//        }
+//    }
 
 //    @Around("execution(* com.arjunshaji.aop.aop.AspectController.order(..))")
 //    public Object aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {

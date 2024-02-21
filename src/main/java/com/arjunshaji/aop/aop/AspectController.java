@@ -9,23 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class AspectController {
 
-    /* assume order creation before payment process */
-    @PostMapping("/order/{amount}")
-    public void order(@PathVariable("amount") double amount) {
+    @PostMapping("/function/{amount}")
+    public void function1(@PathVariable("amount") double amount) {
         // logging
         // authentication and authorization
-        // json validation etc.............
-        // business logic
-        log.info("order business logic.............");
+        // data validation etc.............
+        log.info("function1 business logic");
     }
 
-    @PostMapping("/payment")
-    public void payment() {
+    @PostMapping("/function")
+    public void function2() {
         // logging
         // authentication and authorization
-        // json validation etc.............
-        // business logic
-        log.info("payment business logic.........");
+        // data validation etc.............
+        log.info("function2 business logic");
     }
 
 }
